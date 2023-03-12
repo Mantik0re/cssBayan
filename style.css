@@ -54,15 +54,15 @@ h1 {
   display: block;
 }
 
-.accordion:hover .arrow_img_up {
+.accordion:hover .arrow-img-up {
   display: block;
 }
 
-.accordion-item:hover .arrow_img_down {
+.accordion-item:hover .arrow-img-down {
   display: block;
 }
 
-.accordion-item:hover .arrow_img_up {
+.accordion-item:hover .arrow-img-up {
   display: none;
 }
 
@@ -82,13 +82,13 @@ h1 {
   width: 60%;
 }
 
-.arrow_img_down {
+.arrow-img-down {
   width: 20px;
   height: 20px;
   display: none;
 }
 
-.arrow_img_up {
+.arrow-img-up {
   width: 20px;
   height: 20px;
   display: none;
