@@ -1,0 +1,152 @@
+body {
+  background-color:rgb(234, 239, 239);
+}
+
+h1 {
+ margin-left: 8%;
+ margin-right: 8%;
+ font-family: "Trebuchet MS", Verdana, sans-serif;
+ font-size: 35px;
+ font-weight: bold;
+}
+
+.accordion {
+  margin-top: 4%;
+  margin-bottom: 5%;
+  margin-left: 6%;
+  margin-right: 6%;
+  cursor: pointer;
+  
+}
+
+.accordion-item {
+  margin-bottom: 9px;
+  background-color: #f5f5f5;
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  font-size: 150%;
+  cursor: pointer; 
+}
+
+.accordion-header {
+  display: flex;
+  padding-right: 3%;
+  padding-left: 3%;
+  padding-top: 2%;
+  padding-bottom: 1%;
+  justify-content: space-between;
+}
+
+.accordion-content {
+  padding: 10px;
+  display: none;
+  opacity: 0;
+  animation: ani 2.5s forwards;
+  margin-top: 10px;
+}
+
+@keyframes ani {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+/* при наведении открывается элемент */
+.accordion-header:hover ~ .accordion-content {
+  display: block;
+}
+
+.accordion:hover .arrow-img-up {
+  display: block;
+}
+
+.accordion-item:hover .arrow-img-down {
+  display: block;
+}
+
+.accordion-item:hover .arrow-img-up {
+  display: none;
+}
+
+/* первая открытая картинка */
+.accordion-checkbox:checked ~ .accordion-content {
+  display: block;
+}
+
+.accordion-checkbox {
+  display: none;
+}
+
+.accordion-img {
+  display: block;
+  margin: 0 auto;
+  border: 2px solid #000000;
+  width: 60%;
+}
+
+.arrow-img-down {
+  width: 20px;
+  height: 20px;
+  display: none;
+}
+
+.arrow-img-up {
+  width: 20px;
+  height: 20px;
+  display: none;
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  h1 {
+    font-size: 40px;
+   }
+
+   .accordion-img {
+    width: 60%;
+  }
+}
+
+/* Tablet */
+@media (min-width: 481px) and (max-width: 1024px) {
+  h1 {
+    font-size: 35px;
+   }
+
+   .accordion {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  .accordion-item {
+    font-size: 160%;
+  }
+
+  .accordion-img {
+    width: 70%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 25px;
+   }
+
+   .accordion {
+    margin-top: 2%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .accordion-item {
+    font-size: 100%;
+  }
+
+  .accordion-img {
+    width: 100%;
+  }
+}
+
+
